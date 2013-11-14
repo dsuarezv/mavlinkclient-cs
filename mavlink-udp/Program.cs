@@ -58,6 +58,7 @@ namespace mavlinkudp
                 base_mode = (byte)MAV_MODE_FLAG.MAV_MODE_FLAG_AUTO_ENABLED,
                 custom_mode = 0, 
                 system_status = (byte)MAV_STATE.MAV_STATE_ACTIVE,
+                mavlink_version = (byte)3,
             };
 
             mMsgSysStatus = new Msg_sys_status 
