@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mavlinkprotocol-xamarin", "..\mavlink-generated\mavlinkprotocol-xamarin.csproj", "{69A45336-9FCA-4C33-B26E-ECDEAEF0CF00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mavlink-udp", "..\mavlink-udp\mavlink-udp.csproj", "{AE62057A-923D-4587-A439-9F18A9EC7306}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69A45336-9FCA-4C33-B26E-ECDEAEF0CF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A45336-9FCA-4C33-B26E-ECDEAEF0CF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A45336-9FCA-4C33-B26E-ECDEAEF0CF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A45336-9FCA-4C33-B26E-ECDEAEF0CF00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE62057A-923D-4587-A439-9F18A9EC7306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE62057A-923D-4587-A439-9F18A9EC7306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE62057A-923D-4587-A439-9F18A9EC7306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE62057A-923D-4587-A439-9F18A9EC7306}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ..\mavlink-generated\mavlinkprotocol-xamarin.csproj
+	EndGlobalSection
+EndGlobal
