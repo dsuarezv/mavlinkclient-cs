@@ -13,6 +13,7 @@ namespace MavLink
         public int MavlinkSystemId = 200;
         public int MavlinkComponentId = 1;
         public IPAddress TargetIpAddress = new IPAddress(new byte[] { 127, 0, 0, 1 });
+        public int HeartBeatUpdateRateMs = 1000;
 
         public Msg_heartbeat MsgHeartBeat;
         public Msg_sys_status MsgSysStatus;
@@ -205,7 +206,7 @@ namespace MavLink
                 SendMessage(MsgLocalPosition);
                 SendMessage(MsgAttitude);
 
-                Thread.Sleep(1000);
+                Thread.Sleep(HeartBeatUpdateRateMs);
             }
         }
 

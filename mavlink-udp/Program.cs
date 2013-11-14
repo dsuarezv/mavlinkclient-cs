@@ -9,21 +9,20 @@ using MavLink;
 namespace mavlinkudp
 {
     class MainClass
-    { 
-        
+    {
         public static void Main(string[] args)
         {
             if (!CheckArguments(args)) return;
 
-            MavLinkUdpClient mvuc = new MavLinkUdpClient
+            MavLinkUdpClient mluc = new MavLinkUdpClient
             {
                 TargetIpAddress = new IPAddress(new byte[] { 127, 0, 0, 1 }),
                 MavlinkSystemId = 187
             };
 
-            mvuc.OnPacketReceived += OnMavLinkPacketReceived;
-            mvuc.Initialize();
-            mvuc.BeginHeartBeatLoop();
+            mluc.OnPacketReceived += OnMavLinkPacketReceived;
+            mluc.Initialize();
+            mluc.BeginHeartBeatLoop();
 
             Console.WriteLine("Waiting for UDP...");
             Console.ReadLine();

@@ -28,12 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.RollTrackbar = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PitchTrackbar = new System.Windows.Forms.TrackBar();
+            this.label3 = new System.Windows.Forms.Label();
+            this.YawTrackbar = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.RollTrackbar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PitchTrackbar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YawTrackbar)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // RollTrackbar
+            // 
+            this.RollTrackbar.LargeChange = 100;
+            this.RollTrackbar.Location = new System.Drawing.Point(68, 31);
+            this.RollTrackbar.Maximum = 314;
+            this.RollTrackbar.Minimum = -314;
+            this.RollTrackbar.Name = "RollTrackbar";
+            this.RollTrackbar.Size = new System.Drawing.Size(203, 45);
+            this.RollTrackbar.TabIndex = 0;
+            this.RollTrackbar.Scroll += new System.EventHandler(this.RollTrackbar_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Roll";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Pitch";
+            // 
+            // PitchTrackbar
+            // 
+            this.PitchTrackbar.LargeChange = 100;
+            this.PitchTrackbar.Location = new System.Drawing.Point(68, 78);
+            this.PitchTrackbar.Maximum = 314;
+            this.PitchTrackbar.Minimum = -314;
+            this.PitchTrackbar.Name = "PitchTrackbar";
+            this.PitchTrackbar.Size = new System.Drawing.Size(203, 45);
+            this.PitchTrackbar.TabIndex = 2;
+            this.PitchTrackbar.Scroll += new System.EventHandler(this.PitchTrackbar_Scroll);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Yaw";
+            // 
+            // YawTrackbar
+            // 
+            this.YawTrackbar.LargeChange = 100;
+            this.YawTrackbar.Location = new System.Drawing.Point(68, 120);
+            this.YawTrackbar.Maximum = 314;
+            this.YawTrackbar.Minimum = -314;
+            this.YawTrackbar.Name = "YawTrackbar";
+            this.YawTrackbar.Size = new System.Drawing.Size(203, 45);
+            this.YawTrackbar.TabIndex = 4;
+            this.YawTrackbar.Scroll += new System.EventHandler(this.YawTrackbar_Scroll);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(672, 396);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.YawTrackbar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.PitchTrackbar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RollTrackbar);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.RollTrackbar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PitchTrackbar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YawTrackbar)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TrackBar RollTrackbar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TrackBar PitchTrackbar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TrackBar YawTrackbar;
     }
 }
 
