@@ -23,7 +23,7 @@ using System.Reflection;
 	/// <summary>
 	/// Enumeration of possible mount operation modes
 	/// </summary>
-	public enum MAV_MOUNT_MODE : ushort
+	public enum MAV_MOUNT_MODE : uint
 	{
 
 		/// <summary>
@@ -58,7 +58,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum MAV_CMD : ushort
+	public enum MAV_CMD : uint
 	{
 
 		/// <summary>
@@ -268,7 +268,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum FENCE_ACTION : ushort
+	public enum FENCE_ACTION : uint
 	{
 
 		/// <summary>
@@ -298,7 +298,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum FENCE_BREACH : ushort
+	public enum FENCE_BREACH : uint
 	{
 
 		/// <summary>
@@ -328,7 +328,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum LIMITS_STATE : ushort
+	public enum LIMITS_STATE : uint
 	{
 
 		/// <summary>
@@ -368,7 +368,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum LIMIT_MODULE : ushort
+	public enum LIMIT_MODULE : uint
 	{
 
 		/// <summary>
@@ -393,7 +393,7 @@ using System.Reflection;
 	/// <summary>
 	/// Flags in RALLY_POINT message
 	/// </summary>
-	public enum RALLY_FLAGS : ushort
+	public enum RALLY_FLAGS : uint
 	{
 
 		/// <summary>
@@ -413,7 +413,7 @@ using System.Reflection;
 	/// <summary>
 	/// Micro air vehicle / autopilot classes. This identifies the individual model.
 	/// </summary>
-	public enum MAV_AUTOPILOT : ushort
+	public enum MAV_AUTOPILOT : uint
 	{
 
 		/// <summary>
@@ -508,7 +508,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum MAV_TYPE : ushort
+	public enum MAV_TYPE : uint
 	{
 
 		/// <summary>
@@ -608,7 +608,7 @@ using System.Reflection;
 	/// <summary>
 	/// These flags encode the MAV mode.
 	/// </summary>
-	public enum MAV_MODE_FLAG : ushort
+	public enum MAV_MODE_FLAG : uint
 	{
 
 		/// <summary>
@@ -658,7 +658,7 @@ using System.Reflection;
 	/// <summary>
 	/// These values encode the bit positions of the decode position. These values can be used to read the value of a flag bit by combining the base_mode variable with AND with the flag position value. The result will be either 0 or 1, depending on if the flag is set or not.
 	/// </summary>
-	public enum MAV_MODE_FLAG_DECODE_POSITION : ushort
+	public enum MAV_MODE_FLAG_DECODE_POSITION : uint
 	{
 
 		/// <summary>
@@ -708,7 +708,7 @@ using System.Reflection;
 	/// <summary>
 	/// Override command, pauses current mission execution and moves immediately to a position
 	/// </summary>
-	public enum MAV_GOTO : ushort
+	public enum MAV_GOTO : uint
 	{
 
 		/// <summary>
@@ -739,7 +739,7 @@ using System.Reflection;
 	/// These defines are predefined OR-combined mode flags. There is no need to use values from this enum, but it
 	///               simplifies the use of the mode flags. Note that manual input is enabled in all modes as a safety override.
 	/// </summary>
-	public enum MAV_MODE : ushort
+	public enum MAV_MODE : uint
 	{
 
 		/// <summary>
@@ -804,7 +804,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum MAV_STATE : ushort
+	public enum MAV_STATE : uint
 	{
 
 		/// <summary>
@@ -854,7 +854,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum MAV_COMPONENT : ushort
+	public enum MAV_COMPONENT : uint
 	{
 		MAV_COMP_ID_ALL = 0,
 		MAV_COMP_ID_CAMERA = 100,
@@ -890,7 +890,7 @@ using System.Reflection;
 	/// <summary>
 	/// These encode the sensors whose status is sent as part of the SYS_STATUS message.
 	/// </summary>
-	public enum MAV_SYS_STATUS_SENSOR : ushort
+	public enum MAV_SYS_STATUS_SENSOR : uint
 	{
 
 		/// <summary>
@@ -976,8 +976,8 @@ using System.Reflection;
 		/// <summary>
 		/// 0x10000 rc receiver
 		/// </summary>
-		//MAV_SYS_STATUS_SENSOR_RC_RECEIVER = 65536,
-		//MAV_SYS_STATUS_SENSOR_ENUM_END = 65537,
+		MAV_SYS_STATUS_SENSOR_RC_RECEIVER = 65536,
+		MAV_SYS_STATUS_SENSOR_ENUM_END = 65537,
 
 	}
 
@@ -985,7 +985,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum MAV_FRAME : ushort
+	public enum MAV_FRAME : uint
 	{
 
 		/// <summary>
@@ -1020,7 +1020,7 @@ using System.Reflection;
 	/// <summary>
 	/// 
 	/// </summary>
-	public enum MAVLINK_DATA_STREAM_TYPE : ushort
+	public enum MAVLINK_DATA_STREAM_TYPE : uint
 	{
 		MAVLINK_DATA_STREAM_IMG_JPEG = 1,
 		MAVLINK_DATA_STREAM_IMG_BMP = 2,
@@ -1038,7 +1038,7 @@ using System.Reflection;
 	///     recommendation to the autopilot software. Individual autopilots may or may not obey
 	///     the recommended messages.
 	/// </summary>
-	public enum MAV_DATA_STREAM : ushort
+	public enum MAV_DATA_STREAM : uint
 	{
 
 		/// <summary>
@@ -1095,7 +1095,7 @@ using System.Reflection;
 	///                be used by the vehicle for camera/vehicle attitude alignment (see
 	///                MAV_CMD_NAV_ROI).
 	/// </summary>
-	public enum MAV_ROI : ushort
+	public enum MAV_ROI : uint
 	{
 
 		/// <summary>
@@ -1130,7 +1130,7 @@ using System.Reflection;
 	/// <summary>
 	/// ACK / NACK / ERROR values as a result of MAV_CMDs and for mission item transmission.
 	/// </summary>
-	public enum MAV_CMD_ACK : ushort
+	public enum MAV_CMD_ACK : uint
 	{
 
 		/// <summary>
@@ -1185,7 +1185,7 @@ using System.Reflection;
 	/// <summary>
 	/// Specifies the datatype of a MAVLink parameter.
 	/// </summary>
-	public enum MAV_PARAM_TYPE : ushort
+	public enum MAV_PARAM_TYPE : uint
 	{
 
 		/// <summary>
@@ -1245,7 +1245,7 @@ using System.Reflection;
 	/// <summary>
 	/// result from a mavlink command
 	/// </summary>
-	public enum MAV_RESULT : ushort
+	public enum MAV_RESULT : uint
 	{
 
 		/// <summary>
@@ -1280,7 +1280,7 @@ using System.Reflection;
 	/// <summary>
 	/// result in a mavlink mission ack
 	/// </summary>
-	public enum MAV_MISSION_RESULT : ushort
+	public enum MAV_MISSION_RESULT : uint
 	{
 
 		/// <summary>
@@ -1365,7 +1365,7 @@ using System.Reflection;
 	/// <summary>
 	/// Indicates the severity level, generally used for status messages to indicate their relative urgency. Based on RFC-5424 using expanded definitions at: http://www.kiwisyslog.com/kb/info:-syslog-message-levels/.
 	/// </summary>
-	public enum MAV_SEVERITY : ushort
+	public enum MAV_SEVERITY : uint
 	{
 
 		/// <summary>
@@ -1492,9 +1492,30 @@ namespace MavLink
 		public float accel_cal_z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SENSOR_OFFSETS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SENSOR_OFFSETS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SENSOR_OFFSETS:\n");
+			sb.AppendFormat("- mag_ofs_x: {0}\n", mag_ofs_x);
+			sb.AppendFormat("- mag_ofs_y: {0}\n", mag_ofs_y);
+			sb.AppendFormat("- mag_ofs_z: {0}\n", mag_ofs_z);
+			sb.AppendFormat("- mag_declination: {0}\n", mag_declination);
+			sb.AppendFormat("- raw_press: {0}\n", raw_press);
+			sb.AppendFormat("- raw_temp: {0}\n", raw_temp);
+			sb.AppendFormat("- gyro_cal_x: {0}\n", gyro_cal_x);
+			sb.AppendFormat("- gyro_cal_y: {0}\n", gyro_cal_y);
+			sb.AppendFormat("- gyro_cal_z: {0}\n", gyro_cal_z);
+			sb.AppendFormat("- accel_cal_x: {0}\n", accel_cal_x);
+			sb.AppendFormat("- accel_cal_y: {0}\n", accel_cal_y);
+			sb.AppendFormat("- accel_cal_z: {0}\n", accel_cal_z);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1530,9 +1551,23 @@ namespace MavLink
 		public Int16 mag_ofs_z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_MAG_OFFSETS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_MAG_OFFSETS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_MAG_OFFSETS:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- mag_ofs_x: {0}\n", mag_ofs_x);
+			sb.AppendFormat("- mag_ofs_y: {0}\n", mag_ofs_y);
+			sb.AppendFormat("- mag_ofs_z: {0}\n", mag_ofs_z);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1553,9 +1588,20 @@ namespace MavLink
 		public UInt16 freemem;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MEMINFO(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MEMINFO(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MEMINFO:\n");
+			sb.AppendFormat("- brkval: {0}\n", brkval);
+			sb.AppendFormat("- freemem: {0}\n", freemem);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1596,9 +1642,24 @@ namespace MavLink
 		public UInt16 adc6;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_AP_ADC(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_AP_ADC(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_AP_ADC:\n");
+			sb.AppendFormat("- adc1: {0}\n", adc1);
+			sb.AppendFormat("- adc2: {0}\n", adc2);
+			sb.AppendFormat("- adc3: {0}\n", adc3);
+			sb.AppendFormat("- adc4: {0}\n", adc4);
+			sb.AppendFormat("- adc5: {0}\n", adc5);
+			sb.AppendFormat("- adc6: {0}\n", adc6);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1664,9 +1725,29 @@ namespace MavLink
 		public float extra_value;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DIGICAM_CONFIGURE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DIGICAM_CONFIGURE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DIGICAM_CONFIGURE:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- mode: {0}\n", mode);
+			sb.AppendFormat("- shutter_speed: {0}\n", shutter_speed);
+			sb.AppendFormat("- aperture: {0}\n", aperture);
+			sb.AppendFormat("- iso: {0}\n", iso);
+			sb.AppendFormat("- exposure_type: {0}\n", exposure_type);
+			sb.AppendFormat("- command_id: {0}\n", command_id);
+			sb.AppendFormat("- engine_cut_off: {0}\n", engine_cut_off);
+			sb.AppendFormat("- extra_param: {0}\n", extra_param);
+			sb.AppendFormat("- extra_value: {0}\n", extra_value);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1727,9 +1808,28 @@ namespace MavLink
 		public float extra_value;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DIGICAM_CONTROL(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DIGICAM_CONTROL(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DIGICAM_CONTROL:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- session: {0}\n", session);
+			sb.AppendFormat("- zoom_pos: {0}\n", zoom_pos);
+			sb.AppendFormat("- zoom_step: {0}\n", zoom_step);
+			sb.AppendFormat("- focus_lock: {0}\n", focus_lock);
+			sb.AppendFormat("- shot: {0}\n", shot);
+			sb.AppendFormat("- command_id: {0}\n", command_id);
+			sb.AppendFormat("- extra_param: {0}\n", extra_param);
+			sb.AppendFormat("- extra_value: {0}\n", extra_value);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1770,9 +1870,24 @@ namespace MavLink
 		public byte stab_yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MOUNT_CONFIGURE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MOUNT_CONFIGURE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MOUNT_CONFIGURE:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- mount_mode: {0}\n", mount_mode);
+			sb.AppendFormat("- stab_roll: {0}\n", stab_roll);
+			sb.AppendFormat("- stab_pitch: {0}\n", stab_pitch);
+			sb.AppendFormat("- stab_yaw: {0}\n", stab_yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1813,9 +1928,24 @@ namespace MavLink
 		public byte save_position;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MOUNT_CONTROL(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MOUNT_CONTROL(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MOUNT_CONTROL:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- input_a: {0}\n", input_a);
+			sb.AppendFormat("- input_b: {0}\n", input_b);
+			sb.AppendFormat("- input_c: {0}\n", input_c);
+			sb.AppendFormat("- save_position: {0}\n", save_position);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1851,9 +1981,23 @@ namespace MavLink
 		public Int32 pointing_c;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MOUNT_STATUS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MOUNT_STATUS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MOUNT_STATUS:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- pointing_a: {0}\n", pointing_a);
+			sb.AppendFormat("- pointing_b: {0}\n", pointing_b);
+			sb.AppendFormat("- pointing_c: {0}\n", pointing_c);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1895,9 +2039,24 @@ namespace MavLink
 		public float lng;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_FENCE_POINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_FENCE_POINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_FENCE_POINT:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- idx: {0}\n", idx);
+			sb.AppendFormat("- count: {0}\n", count);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lng: {0}\n", lng);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1923,9 +2082,21 @@ namespace MavLink
 		public byte idx;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_FENCE_FETCH_POINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_FENCE_FETCH_POINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_FENCE_FETCH_POINT:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- idx: {0}\n", idx);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -1957,9 +2128,22 @@ namespace MavLink
 		public UInt32 breach_time;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_FENCE_STATUS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_FENCE_STATUS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_FENCE_STATUS:\n");
+			sb.AppendFormat("- breach_status: {0}\n", breach_status);
+			sb.AppendFormat("- breach_count: {0}\n", breach_count);
+			sb.AppendFormat("- breach_type: {0}\n", breach_type);
+			sb.AppendFormat("- breach_time: {0}\n", breach_time);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2005,9 +2189,25 @@ namespace MavLink
 		public float error_yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_AHRS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_AHRS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_AHRS:\n");
+			sb.AppendFormat("- omegaIx: {0}\n", omegaIx);
+			sb.AppendFormat("- omegaIy: {0}\n", omegaIy);
+			sb.AppendFormat("- omegaIz: {0}\n", omegaIz);
+			sb.AppendFormat("- accel_weight: {0}\n", accel_weight);
+			sb.AppendFormat("- renorm_val: {0}\n", renorm_val);
+			sb.AppendFormat("- error_rp: {0}\n", error_rp);
+			sb.AppendFormat("- error_yaw: {0}\n", error_yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2073,9 +2273,29 @@ namespace MavLink
 		public Int32 lng;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SIMSTATE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SIMSTATE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SIMSTATE:\n");
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- xacc: {0}\n", xacc);
+			sb.AppendFormat("- yacc: {0}\n", yacc);
+			sb.AppendFormat("- zacc: {0}\n", zacc);
+			sb.AppendFormat("- xgyro: {0}\n", xgyro);
+			sb.AppendFormat("- ygyro: {0}\n", ygyro);
+			sb.AppendFormat("- zgyro: {0}\n", zgyro);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lng: {0}\n", lng);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2096,9 +2316,20 @@ namespace MavLink
 		public byte I2Cerr;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HWSTATUS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HWSTATUS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HWSTATUS:\n");
+			sb.AppendFormat("- Vcc: {0}\n", Vcc);
+			sb.AppendFormat("- I2Cerr: {0}\n", I2Cerr);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2144,9 +2375,25 @@ namespace MavLink
 		public UInt16 @fixed;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RADIO(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RADIO(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RADIO:\n");
+			sb.AppendFormat("- rssi: {0}\n", rssi);
+			sb.AppendFormat("- remrssi: {0}\n", remrssi);
+			sb.AppendFormat("- txbuf: {0}\n", txbuf);
+			sb.AppendFormat("- noise: {0}\n", noise);
+			sb.AppendFormat("- remnoise: {0}\n", remnoise);
+			sb.AppendFormat("- rxerrors: {0}\n", rxerrors);
+			sb.AppendFormat("- fixed: {0}\n", @fixed);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2203,9 +2450,27 @@ namespace MavLink
 		public byte mods_triggered;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_LIMITS_STATUS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_LIMITS_STATUS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_LIMITS_STATUS:\n");
+			sb.AppendFormat("- limits_state: {0}\n", limits_state);
+			sb.AppendFormat("- last_trigger: {0}\n", last_trigger);
+			sb.AppendFormat("- last_action: {0}\n", last_action);
+			sb.AppendFormat("- last_recovery: {0}\n", last_recovery);
+			sb.AppendFormat("- last_clear: {0}\n", last_clear);
+			sb.AppendFormat("- breach_count: {0}\n", breach_count);
+			sb.AppendFormat("- mods_enabled: {0}\n", mods_enabled);
+			sb.AppendFormat("- mods_required: {0}\n", mods_required);
+			sb.AppendFormat("- mods_triggered: {0}\n", mods_triggered);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2231,9 +2496,21 @@ namespace MavLink
 		public float speed_z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_WIND(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_WIND(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_WIND:\n");
+			sb.AppendFormat("- direction: {0}\n", direction);
+			sb.AppendFormat("- speed: {0}\n", speed);
+			sb.AppendFormat("- speed_z: {0}\n", speed_z);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2259,9 +2536,21 @@ namespace MavLink
 		public byte[] data; // Array size 16
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DATA16(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DATA16(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DATA16:\n");
+			sb.AppendFormat("- type: {0}\n", type);
+			sb.AppendFormat("- len: {0}\n", len);
+			sb.AppendFormat("- data: {0}\n", data);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2287,9 +2576,21 @@ namespace MavLink
 		public byte[] data; // Array size 32
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DATA32(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DATA32(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DATA32:\n");
+			sb.AppendFormat("- type: {0}\n", type);
+			sb.AppendFormat("- len: {0}\n", len);
+			sb.AppendFormat("- data: {0}\n", data);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2315,9 +2616,21 @@ namespace MavLink
 		public byte[] data; // Array size 64
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DATA64(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DATA64(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DATA64:\n");
+			sb.AppendFormat("- type: {0}\n", type);
+			sb.AppendFormat("- len: {0}\n", len);
+			sb.AppendFormat("- data: {0}\n", data);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2343,9 +2656,21 @@ namespace MavLink
 		public byte[] data; // Array size 96
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DATA96(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DATA96(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DATA96:\n");
+			sb.AppendFormat("- type: {0}\n", type);
+			sb.AppendFormat("- len: {0}\n", len);
+			sb.AppendFormat("- data: {0}\n", data);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2366,9 +2691,20 @@ namespace MavLink
 		public float voltage;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RANGEFINDER(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RANGEFINDER(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RANGEFINDER:\n");
+			sb.AppendFormat("- distance: {0}\n", distance);
+			sb.AppendFormat("- voltage: {0}\n", voltage);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2439,9 +2775,30 @@ namespace MavLink
 		public float Pcz;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_AIRSPEED_AUTOCAL(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_AIRSPEED_AUTOCAL(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_AIRSPEED_AUTOCAL:\n");
+			sb.AppendFormat("- vx: {0}\n", vx);
+			sb.AppendFormat("- vy: {0}\n", vy);
+			sb.AppendFormat("- vz: {0}\n", vz);
+			sb.AppendFormat("- diff_pressure: {0}\n", diff_pressure);
+			sb.AppendFormat("- EAS2TAS: {0}\n", EAS2TAS);
+			sb.AppendFormat("- ratio: {0}\n", ratio);
+			sb.AppendFormat("- state_x: {0}\n", state_x);
+			sb.AppendFormat("- state_y: {0}\n", state_y);
+			sb.AppendFormat("- state_z: {0}\n", state_z);
+			sb.AppendFormat("- Pax: {0}\n", Pax);
+			sb.AppendFormat("- Pby: {0}\n", Pby);
+			sb.AppendFormat("- Pcz: {0}\n", Pcz);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2502,9 +2859,28 @@ namespace MavLink
 		public byte flags;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RALLY_POINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RALLY_POINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RALLY_POINT:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- idx: {0}\n", idx);
+			sb.AppendFormat("- count: {0}\n", count);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lng: {0}\n", lng);
+			sb.AppendFormat("- alt: {0}\n", alt);
+			sb.AppendFormat("- break_alt: {0}\n", break_alt);
+			sb.AppendFormat("- land_dir: {0}\n", land_dir);
+			sb.AppendFormat("- flags: {0}\n", flags);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2530,9 +2906,21 @@ namespace MavLink
 		public byte idx;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RALLY_FETCH_POINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RALLY_FETCH_POINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RALLY_FETCH_POINT:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- idx: {0}\n", idx);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2573,9 +2961,24 @@ namespace MavLink
 		public byte mavlink_version;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HEARTBEAT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HEARTBEAT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HEARTBEAT:\n");
+			sb.AppendFormat("- type: {0}\n", type);
+			sb.AppendFormat("- autopilot: {0}\n", autopilot);
+			sb.AppendFormat("- base_mode: {0}\n", base_mode);
+			sb.AppendFormat("- custom_mode: {0}\n", custom_mode);
+			sb.AppendFormat("- system_status: {0}\n", system_status);
+			sb.AppendFormat("- mavlink_version: {0}\n", mavlink_version);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2651,9 +3054,31 @@ namespace MavLink
 		public UInt16 errors_count4;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SYS_STATUS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SYS_STATUS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SYS_STATUS:\n");
+			sb.AppendFormat("- onboard_control_sensors_present: {0}\n", onboard_control_sensors_present);
+			sb.AppendFormat("- onboard_control_sensors_enabled: {0}\n", onboard_control_sensors_enabled);
+			sb.AppendFormat("- onboard_control_sensors_health: {0}\n", onboard_control_sensors_health);
+			sb.AppendFormat("- load: {0}\n", load);
+			sb.AppendFormat("- voltage_battery: {0}\n", voltage_battery);
+			sb.AppendFormat("- current_battery: {0}\n", current_battery);
+			sb.AppendFormat("- battery_remaining: {0}\n", battery_remaining);
+			sb.AppendFormat("- drop_rate_comm: {0}\n", drop_rate_comm);
+			sb.AppendFormat("- errors_comm: {0}\n", errors_comm);
+			sb.AppendFormat("- errors_count1: {0}\n", errors_count1);
+			sb.AppendFormat("- errors_count2: {0}\n", errors_count2);
+			sb.AppendFormat("- errors_count3: {0}\n", errors_count3);
+			sb.AppendFormat("- errors_count4: {0}\n", errors_count4);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2674,9 +3099,20 @@ namespace MavLink
 		public UInt32 time_boot_ms;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SYSTEM_TIME(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SYSTEM_TIME(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SYSTEM_TIME:\n");
+			sb.AppendFormat("- time_unix_usec: {0}\n", time_unix_usec);
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2707,9 +3143,22 @@ namespace MavLink
 		public byte target_component;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_PING(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_PING(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_PING:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- seq: {0}\n", seq);
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2740,9 +3189,22 @@ namespace MavLink
 		public byte[] passkey; // Array size 25
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_CHANGE_OPERATOR_CONTROL(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_CHANGE_OPERATOR_CONTROL(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_CHANGE_OPERATOR_CONTROL:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- control_request: {0}\n", control_request);
+			sb.AppendFormat("- version: {0}\n", version);
+			sb.AppendFormat("- passkey: {0}\n", passkey);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2768,9 +3230,21 @@ namespace MavLink
 		public byte ack;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_CHANGE_OPERATOR_CONTROL_ACK(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_CHANGE_OPERATOR_CONTROL_ACK(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_CHANGE_OPERATOR_CONTROL_ACK:\n");
+			sb.AppendFormat("- gcs_system_id: {0}\n", gcs_system_id);
+			sb.AppendFormat("- control_request: {0}\n", control_request);
+			sb.AppendFormat("- ack: {0}\n", ack);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2782,9 +3256,19 @@ namespace MavLink
 		public byte[] key; // Array size 32
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_AUTH_KEY(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_AUTH_KEY(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_AUTH_KEY:\n");
+			sb.AppendFormat("- key: {0}\n", key);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2810,9 +3294,21 @@ namespace MavLink
 		public UInt32 custom_mode;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_MODE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_MODE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_MODE:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- base_mode: {0}\n", base_mode);
+			sb.AppendFormat("- custom_mode: {0}\n", custom_mode);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2843,9 +3339,22 @@ namespace MavLink
 		public Int16 param_index;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_PARAM_REQUEST_READ(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_PARAM_REQUEST_READ(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_PARAM_REQUEST_READ:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- param_id: {0}\n", param_id);
+			sb.AppendFormat("- param_index: {0}\n", param_index);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2866,9 +3375,20 @@ namespace MavLink
 		public byte target_component;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_PARAM_REQUEST_LIST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_PARAM_REQUEST_LIST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_PARAM_REQUEST_LIST:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2904,9 +3424,23 @@ namespace MavLink
 		public UInt16 param_index;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_PARAM_VALUE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_PARAM_VALUE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_PARAM_VALUE:\n");
+			sb.AppendFormat("- param_id: {0}\n", param_id);
+			sb.AppendFormat("- param_value: {0}\n", param_value);
+			sb.AppendFormat("- param_type: {0}\n", param_type);
+			sb.AppendFormat("- param_count: {0}\n", param_count);
+			sb.AppendFormat("- param_index: {0}\n", param_index);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -2942,9 +3476,23 @@ namespace MavLink
 		public byte param_type;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_PARAM_SET(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_PARAM_SET(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_PARAM_SET:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- param_id: {0}\n", param_id);
+			sb.AppendFormat("- param_value: {0}\n", param_value);
+			sb.AppendFormat("- param_type: {0}\n", param_type);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3006,9 +3554,28 @@ namespace MavLink
 		public byte satellites_visible;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_GPS_RAW_INT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_GPS_RAW_INT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_GPS_RAW_INT:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- fix_type: {0}\n", fix_type);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lon: {0}\n", lon);
+			sb.AppendFormat("- alt: {0}\n", alt);
+			sb.AppendFormat("- eph: {0}\n", eph);
+			sb.AppendFormat("- epv: {0}\n", epv);
+			sb.AppendFormat("- vel: {0}\n", vel);
+			sb.AppendFormat("- cog: {0}\n", cog);
+			sb.AppendFormat("- satellites_visible: {0}\n", satellites_visible);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3049,9 +3616,24 @@ namespace MavLink
 		public byte[] satellite_snr; // Array size 20
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_GPS_STATUS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_GPS_STATUS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_GPS_STATUS:\n");
+			sb.AppendFormat("- satellites_visible: {0}\n", satellites_visible);
+			sb.AppendFormat("- satellite_prn: {0}\n", satellite_prn);
+			sb.AppendFormat("- satellite_used: {0}\n", satellite_used);
+			sb.AppendFormat("- satellite_elevation: {0}\n", satellite_elevation);
+			sb.AppendFormat("- satellite_azimuth: {0}\n", satellite_azimuth);
+			sb.AppendFormat("- satellite_snr: {0}\n", satellite_snr);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3112,9 +3694,28 @@ namespace MavLink
 		public Int16 zmag;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SCALED_IMU(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SCALED_IMU(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SCALED_IMU:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- xacc: {0}\n", xacc);
+			sb.AppendFormat("- yacc: {0}\n", yacc);
+			sb.AppendFormat("- zacc: {0}\n", zacc);
+			sb.AppendFormat("- xgyro: {0}\n", xgyro);
+			sb.AppendFormat("- ygyro: {0}\n", ygyro);
+			sb.AppendFormat("- zgyro: {0}\n", zgyro);
+			sb.AppendFormat("- xmag: {0}\n", xmag);
+			sb.AppendFormat("- ymag: {0}\n", ymag);
+			sb.AppendFormat("- zmag: {0}\n", zmag);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3175,9 +3776,28 @@ namespace MavLink
 		public Int16 zmag;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RAW_IMU(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RAW_IMU(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RAW_IMU:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- xacc: {0}\n", xacc);
+			sb.AppendFormat("- yacc: {0}\n", yacc);
+			sb.AppendFormat("- zacc: {0}\n", zacc);
+			sb.AppendFormat("- xgyro: {0}\n", xgyro);
+			sb.AppendFormat("- ygyro: {0}\n", ygyro);
+			sb.AppendFormat("- zgyro: {0}\n", zgyro);
+			sb.AppendFormat("- xmag: {0}\n", xmag);
+			sb.AppendFormat("- ymag: {0}\n", ymag);
+			sb.AppendFormat("- zmag: {0}\n", zmag);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3213,9 +3833,23 @@ namespace MavLink
 		public Int16 temperature;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RAW_PRESSURE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RAW_PRESSURE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RAW_PRESSURE:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- press_abs: {0}\n", press_abs);
+			sb.AppendFormat("- press_diff1: {0}\n", press_diff1);
+			sb.AppendFormat("- press_diff2: {0}\n", press_diff2);
+			sb.AppendFormat("- temperature: {0}\n", temperature);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3246,9 +3880,22 @@ namespace MavLink
 		public Int16 temperature;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SCALED_PRESSURE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SCALED_PRESSURE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SCALED_PRESSURE:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- press_abs: {0}\n", press_abs);
+			sb.AppendFormat("- press_diff: {0}\n", press_diff);
+			sb.AppendFormat("- temperature: {0}\n", temperature);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3294,9 +3941,25 @@ namespace MavLink
 		public float yawspeed;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_ATTITUDE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_ATTITUDE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_ATTITUDE:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- rollspeed: {0}\n", rollspeed);
+			sb.AppendFormat("- pitchspeed: {0}\n", pitchspeed);
+			sb.AppendFormat("- yawspeed: {0}\n", yawspeed);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3347,9 +4010,26 @@ namespace MavLink
 		public float yawspeed;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_ATTITUDE_QUATERNION(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_ATTITUDE_QUATERNION(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_ATTITUDE_QUATERNION:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- q1: {0}\n", q1);
+			sb.AppendFormat("- q2: {0}\n", q2);
+			sb.AppendFormat("- q3: {0}\n", q3);
+			sb.AppendFormat("- q4: {0}\n", q4);
+			sb.AppendFormat("- rollspeed: {0}\n", rollspeed);
+			sb.AppendFormat("- pitchspeed: {0}\n", pitchspeed);
+			sb.AppendFormat("- yawspeed: {0}\n", yawspeed);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3395,9 +4075,25 @@ namespace MavLink
 		public float vz;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_LOCAL_POSITION_NED(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_LOCAL_POSITION_NED(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_LOCAL_POSITION_NED:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+			sb.AppendFormat("- vx: {0}\n", vx);
+			sb.AppendFormat("- vy: {0}\n", vy);
+			sb.AppendFormat("- vz: {0}\n", vz);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3454,9 +4150,27 @@ namespace MavLink
 		public UInt16 hdg;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_GLOBAL_POSITION_INT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_GLOBAL_POSITION_INT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_GLOBAL_POSITION_INT:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lon: {0}\n", lon);
+			sb.AppendFormat("- alt: {0}\n", alt);
+			sb.AppendFormat("- relative_alt: {0}\n", relative_alt);
+			sb.AppendFormat("- vx: {0}\n", vx);
+			sb.AppendFormat("- vy: {0}\n", vy);
+			sb.AppendFormat("- vz: {0}\n", vz);
+			sb.AppendFormat("- hdg: {0}\n", hdg);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3522,9 +4236,29 @@ namespace MavLink
 		public byte rssi;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RC_CHANNELS_SCALED(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RC_CHANNELS_SCALED(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RC_CHANNELS_SCALED:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- port: {0}\n", port);
+			sb.AppendFormat("- chan1_scaled: {0}\n", chan1_scaled);
+			sb.AppendFormat("- chan2_scaled: {0}\n", chan2_scaled);
+			sb.AppendFormat("- chan3_scaled: {0}\n", chan3_scaled);
+			sb.AppendFormat("- chan4_scaled: {0}\n", chan4_scaled);
+			sb.AppendFormat("- chan5_scaled: {0}\n", chan5_scaled);
+			sb.AppendFormat("- chan6_scaled: {0}\n", chan6_scaled);
+			sb.AppendFormat("- chan7_scaled: {0}\n", chan7_scaled);
+			sb.AppendFormat("- chan8_scaled: {0}\n", chan8_scaled);
+			sb.AppendFormat("- rssi: {0}\n", rssi);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3590,9 +4324,29 @@ namespace MavLink
 		public byte rssi;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RC_CHANNELS_RAW(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RC_CHANNELS_RAW(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RC_CHANNELS_RAW:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- port: {0}\n", port);
+			sb.AppendFormat("- chan1_raw: {0}\n", chan1_raw);
+			sb.AppendFormat("- chan2_raw: {0}\n", chan2_raw);
+			sb.AppendFormat("- chan3_raw: {0}\n", chan3_raw);
+			sb.AppendFormat("- chan4_raw: {0}\n", chan4_raw);
+			sb.AppendFormat("- chan5_raw: {0}\n", chan5_raw);
+			sb.AppendFormat("- chan6_raw: {0}\n", chan6_raw);
+			sb.AppendFormat("- chan7_raw: {0}\n", chan7_raw);
+			sb.AppendFormat("- chan8_raw: {0}\n", chan8_raw);
+			sb.AppendFormat("- rssi: {0}\n", rssi);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3653,9 +4407,28 @@ namespace MavLink
 		public UInt16 servo8_raw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SERVO_OUTPUT_RAW(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SERVO_OUTPUT_RAW(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SERVO_OUTPUT_RAW:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- port: {0}\n", port);
+			sb.AppendFormat("- servo1_raw: {0}\n", servo1_raw);
+			sb.AppendFormat("- servo2_raw: {0}\n", servo2_raw);
+			sb.AppendFormat("- servo3_raw: {0}\n", servo3_raw);
+			sb.AppendFormat("- servo4_raw: {0}\n", servo4_raw);
+			sb.AppendFormat("- servo5_raw: {0}\n", servo5_raw);
+			sb.AppendFormat("- servo6_raw: {0}\n", servo6_raw);
+			sb.AppendFormat("- servo7_raw: {0}\n", servo7_raw);
+			sb.AppendFormat("- servo8_raw: {0}\n", servo8_raw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3686,9 +4459,22 @@ namespace MavLink
 		public Int16 end_index;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_REQUEST_PARTIAL_LIST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_REQUEST_PARTIAL_LIST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_REQUEST_PARTIAL_LIST:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- start_index: {0}\n", start_index);
+			sb.AppendFormat("- end_index: {0}\n", end_index);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3719,9 +4505,22 @@ namespace MavLink
 		public Int16 end_index;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_WRITE_PARTIAL_LIST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_WRITE_PARTIAL_LIST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_WRITE_PARTIAL_LIST:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- start_index: {0}\n", start_index);
+			sb.AppendFormat("- end_index: {0}\n", end_index);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3803,9 +4602,32 @@ namespace MavLink
 		public float z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_ITEM(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_ITEM(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_ITEM:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- seq: {0}\n", seq);
+			sb.AppendFormat("- frame: {0}\n", frame);
+			sb.AppendFormat("- command: {0}\n", command);
+			sb.AppendFormat("- current: {0}\n", current);
+			sb.AppendFormat("- autocontinue: {0}\n", autocontinue);
+			sb.AppendFormat("- param1: {0}\n", param1);
+			sb.AppendFormat("- param2: {0}\n", param2);
+			sb.AppendFormat("- param3: {0}\n", param3);
+			sb.AppendFormat("- param4: {0}\n", param4);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3831,9 +4653,21 @@ namespace MavLink
 		public UInt16 seq;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_REQUEST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_REQUEST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_REQUEST:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- seq: {0}\n", seq);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3859,9 +4693,21 @@ namespace MavLink
 		public UInt16 seq;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_SET_CURRENT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_SET_CURRENT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_SET_CURRENT:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- seq: {0}\n", seq);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3877,9 +4723,19 @@ namespace MavLink
 		public UInt16 seq;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_CURRENT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_CURRENT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_CURRENT:\n");
+			sb.AppendFormat("- seq: {0}\n", seq);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3900,9 +4756,20 @@ namespace MavLink
 		public byte target_component;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_REQUEST_LIST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_REQUEST_LIST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_REQUEST_LIST:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3928,9 +4795,21 @@ namespace MavLink
 		public UInt16 count;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_COUNT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_COUNT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_COUNT:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- count: {0}\n", count);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3951,9 +4830,20 @@ namespace MavLink
 		public byte target_component;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_CLEAR_ALL(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_CLEAR_ALL(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_CLEAR_ALL:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3969,9 +4859,19 @@ namespace MavLink
 		public UInt16 seq;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_ITEM_REACHED(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_ITEM_REACHED(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_ITEM_REACHED:\n");
+			sb.AppendFormat("- seq: {0}\n", seq);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -3997,9 +4897,21 @@ namespace MavLink
 		public byte type;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MISSION_ACK(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MISSION_ACK(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MISSION_ACK:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- type: {0}\n", type);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4030,9 +4942,22 @@ namespace MavLink
 		public Int32 altitude;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_GPS_GLOBAL_ORIGIN(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_GPS_GLOBAL_ORIGIN(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_GPS_GLOBAL_ORIGIN:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- latitude: {0}\n", latitude);
+			sb.AppendFormat("- longitude: {0}\n", longitude);
+			sb.AppendFormat("- altitude: {0}\n", altitude);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4058,9 +4983,21 @@ namespace MavLink
 		public Int32 altitude;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_GPS_GLOBAL_ORIGIN(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_GPS_GLOBAL_ORIGIN(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_GPS_GLOBAL_ORIGIN:\n");
+			sb.AppendFormat("- latitude: {0}\n", latitude);
+			sb.AppendFormat("- longitude: {0}\n", longitude);
+			sb.AppendFormat("- altitude: {0}\n", altitude);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4106,9 +5043,25 @@ namespace MavLink
 		public float yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_LOCAL_POSITION_SETPOINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_LOCAL_POSITION_SETPOINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_LOCAL_POSITION_SETPOINT:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- coordinate_frame: {0}\n", coordinate_frame);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4144,9 +5097,23 @@ namespace MavLink
 		public float yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_LOCAL_POSITION_SETPOINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_LOCAL_POSITION_SETPOINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_LOCAL_POSITION_SETPOINT:\n");
+			sb.AppendFormat("- coordinate_frame: {0}\n", coordinate_frame);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4182,9 +5149,23 @@ namespace MavLink
 		public Int16 yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_GLOBAL_POSITION_SETPOINT_INT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_GLOBAL_POSITION_SETPOINT_INT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_GLOBAL_POSITION_SETPOINT_INT:\n");
+			sb.AppendFormat("- coordinate_frame: {0}\n", coordinate_frame);
+			sb.AppendFormat("- latitude: {0}\n", latitude);
+			sb.AppendFormat("- longitude: {0}\n", longitude);
+			sb.AppendFormat("- altitude: {0}\n", altitude);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4220,9 +5201,23 @@ namespace MavLink
 		public Int16 yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_GLOBAL_POSITION_SETPOINT_INT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_GLOBAL_POSITION_SETPOINT_INT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_GLOBAL_POSITION_SETPOINT_INT:\n");
+			sb.AppendFormat("- coordinate_frame: {0}\n", coordinate_frame);
+			sb.AppendFormat("- latitude: {0}\n", latitude);
+			sb.AppendFormat("- longitude: {0}\n", longitude);
+			sb.AppendFormat("- altitude: {0}\n", altitude);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4278,9 +5273,27 @@ namespace MavLink
 		public float p2z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SAFETY_SET_ALLOWED_AREA(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SAFETY_SET_ALLOWED_AREA(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SAFETY_SET_ALLOWED_AREA:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- frame: {0}\n", frame);
+			sb.AppendFormat("- p1x: {0}\n", p1x);
+			sb.AppendFormat("- p1y: {0}\n", p1y);
+			sb.AppendFormat("- p1z: {0}\n", p1z);
+			sb.AppendFormat("- p2x: {0}\n", p2x);
+			sb.AppendFormat("- p2y: {0}\n", p2y);
+			sb.AppendFormat("- p2z: {0}\n", p2z);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4326,9 +5339,25 @@ namespace MavLink
 		public float p2z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SAFETY_ALLOWED_AREA(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SAFETY_ALLOWED_AREA(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SAFETY_ALLOWED_AREA:\n");
+			sb.AppendFormat("- frame: {0}\n", frame);
+			sb.AppendFormat("- p1x: {0}\n", p1x);
+			sb.AppendFormat("- p1y: {0}\n", p1y);
+			sb.AppendFormat("- p1z: {0}\n", p1z);
+			sb.AppendFormat("- p2x: {0}\n", p2x);
+			sb.AppendFormat("- p2y: {0}\n", p2y);
+			sb.AppendFormat("- p2z: {0}\n", p2z);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4369,9 +5398,24 @@ namespace MavLink
 		public float thrust;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_ROLL_PITCH_YAW_THRUST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_ROLL_PITCH_YAW_THRUST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_ROLL_PITCH_YAW_THRUST:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- thrust: {0}\n", thrust);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4412,9 +5456,24 @@ namespace MavLink
 		public float thrust;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_ROLL_PITCH_YAW_SPEED_THRUST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_ROLL_PITCH_YAW_SPEED_THRUST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_ROLL_PITCH_YAW_SPEED_THRUST:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- roll_speed: {0}\n", roll_speed);
+			sb.AppendFormat("- pitch_speed: {0}\n", pitch_speed);
+			sb.AppendFormat("- yaw_speed: {0}\n", yaw_speed);
+			sb.AppendFormat("- thrust: {0}\n", thrust);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4450,9 +5509,23 @@ namespace MavLink
 		public float thrust;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_ROLL_PITCH_YAW_THRUST_SETPOINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_ROLL_PITCH_YAW_THRUST_SETPOINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_ROLL_PITCH_YAW_THRUST_SETPOINT:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- thrust: {0}\n", thrust);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4488,9 +5561,23 @@ namespace MavLink
 		public float thrust;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_ROLL_PITCH_YAW_SPEED_THRUST_SETPOINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_ROLL_PITCH_YAW_SPEED_THRUST_SETPOINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_ROLL_PITCH_YAW_SPEED_THRUST_SETPOINT:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- roll_speed: {0}\n", roll_speed);
+			sb.AppendFormat("- pitch_speed: {0}\n", pitch_speed);
+			sb.AppendFormat("- yaw_speed: {0}\n", yaw_speed);
+			sb.AppendFormat("- thrust: {0}\n", thrust);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4526,9 +5613,23 @@ namespace MavLink
 		public UInt16 motor_left_sw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_QUAD_MOTORS_SETPOINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_QUAD_MOTORS_SETPOINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_QUAD_MOTORS_SETPOINT:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- motor_front_nw: {0}\n", motor_front_nw);
+			sb.AppendFormat("- motor_right_ne: {0}\n", motor_right_ne);
+			sb.AppendFormat("- motor_back_se: {0}\n", motor_back_se);
+			sb.AppendFormat("- motor_left_sw: {0}\n", motor_left_sw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4569,9 +5670,24 @@ namespace MavLink
 		public UInt16[] thrust; // Array size 4
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_QUAD_SWARM_ROLL_PITCH_YAW_THRUST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_QUAD_SWARM_ROLL_PITCH_YAW_THRUST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_QUAD_SWARM_ROLL_PITCH_YAW_THRUST:\n");
+			sb.AppendFormat("- group: {0}\n", group);
+			sb.AppendFormat("- mode: {0}\n", mode);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- thrust: {0}\n", thrust);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4622,9 +5738,26 @@ namespace MavLink
 		public float xtrack_error;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_NAV_CONTROLLER_OUTPUT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_NAV_CONTROLLER_OUTPUT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_NAV_CONTROLLER_OUTPUT:\n");
+			sb.AppendFormat("- nav_roll: {0}\n", nav_roll);
+			sb.AppendFormat("- nav_pitch: {0}\n", nav_pitch);
+			sb.AppendFormat("- nav_bearing: {0}\n", nav_bearing);
+			sb.AppendFormat("- target_bearing: {0}\n", target_bearing);
+			sb.AppendFormat("- wp_dist: {0}\n", wp_dist);
+			sb.AppendFormat("- alt_error: {0}\n", alt_error);
+			sb.AppendFormat("- aspd_error: {0}\n", aspd_error);
+			sb.AppendFormat("- xtrack_error: {0}\n", xtrack_error);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4680,9 +5813,27 @@ namespace MavLink
 		public UInt16[] thrust; // Array size 4
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SET_QUAD_SWARM_LED_ROLL_PITCH_YAW_THRUST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SET_QUAD_SWARM_LED_ROLL_PITCH_YAW_THRUST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SET_QUAD_SWARM_LED_ROLL_PITCH_YAW_THRUST:\n");
+			sb.AppendFormat("- group: {0}\n", group);
+			sb.AppendFormat("- mode: {0}\n", mode);
+			sb.AppendFormat("- led_red: {0}\n", led_red);
+			sb.AppendFormat("- led_blue: {0}\n", led_blue);
+			sb.AppendFormat("- led_green: {0}\n", led_green);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- thrust: {0}\n", thrust);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4738,9 +5889,27 @@ namespace MavLink
 		public float vzErr;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_STATE_CORRECTION(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_STATE_CORRECTION(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_STATE_CORRECTION:\n");
+			sb.AppendFormat("- xErr: {0}\n", xErr);
+			sb.AppendFormat("- yErr: {0}\n", yErr);
+			sb.AppendFormat("- zErr: {0}\n", zErr);
+			sb.AppendFormat("- rollErr: {0}\n", rollErr);
+			sb.AppendFormat("- pitchErr: {0}\n", pitchErr);
+			sb.AppendFormat("- yawErr: {0}\n", yawErr);
+			sb.AppendFormat("- vxErr: {0}\n", vxErr);
+			sb.AppendFormat("- vyErr: {0}\n", vyErr);
+			sb.AppendFormat("- vzErr: {0}\n", vzErr);
+
+            return sb.ToString();
+        }
+
 	}
 
 	public class Msg_request_data_stream : MavlinkMessage
@@ -4772,9 +5941,23 @@ namespace MavLink
 		public byte start_stop;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_REQUEST_DATA_STREAM(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_REQUEST_DATA_STREAM(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_REQUEST_DATA_STREAM:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- req_stream_id: {0}\n", req_stream_id);
+			sb.AppendFormat("- req_message_rate: {0}\n", req_message_rate);
+			sb.AppendFormat("- start_stop: {0}\n", start_stop);
+
+            return sb.ToString();
+        }
+
 	}
 
 	public class Msg_data_stream : MavlinkMessage
@@ -4796,9 +5979,21 @@ namespace MavLink
 		public byte on_off;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DATA_STREAM(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DATA_STREAM(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DATA_STREAM:\n");
+			sb.AppendFormat("- stream_id: {0}\n", stream_id);
+			sb.AppendFormat("- message_rate: {0}\n", message_rate);
+			sb.AppendFormat("- on_off: {0}\n", on_off);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4839,9 +6034,24 @@ namespace MavLink
 		public UInt16 buttons;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MANUAL_CONTROL(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MANUAL_CONTROL(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MANUAL_CONTROL:\n");
+			sb.AppendFormat("- target: {0}\n", target);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+			sb.AppendFormat("- r: {0}\n", r);
+			sb.AppendFormat("- buttons: {0}\n", buttons);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4902,9 +6112,28 @@ namespace MavLink
 		public UInt16 chan8_raw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RC_CHANNELS_OVERRIDE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RC_CHANNELS_OVERRIDE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RC_CHANNELS_OVERRIDE:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- chan1_raw: {0}\n", chan1_raw);
+			sb.AppendFormat("- chan2_raw: {0}\n", chan2_raw);
+			sb.AppendFormat("- chan3_raw: {0}\n", chan3_raw);
+			sb.AppendFormat("- chan4_raw: {0}\n", chan4_raw);
+			sb.AppendFormat("- chan5_raw: {0}\n", chan5_raw);
+			sb.AppendFormat("- chan6_raw: {0}\n", chan6_raw);
+			sb.AppendFormat("- chan7_raw: {0}\n", chan7_raw);
+			sb.AppendFormat("- chan8_raw: {0}\n", chan8_raw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -4945,9 +6174,24 @@ namespace MavLink
 		public float climb;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_VFR_HUD(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_VFR_HUD(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_VFR_HUD:\n");
+			sb.AppendFormat("- airspeed: {0}\n", airspeed);
+			sb.AppendFormat("- groundspeed: {0}\n", groundspeed);
+			sb.AppendFormat("- heading: {0}\n", heading);
+			sb.AppendFormat("- throttle: {0}\n", throttle);
+			sb.AppendFormat("- alt: {0}\n", alt);
+			sb.AppendFormat("- climb: {0}\n", climb);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5013,9 +6257,29 @@ namespace MavLink
 		public float param7;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_COMMAND_LONG(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_COMMAND_LONG(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_COMMAND_LONG:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- target_component: {0}\n", target_component);
+			sb.AppendFormat("- command: {0}\n", command);
+			sb.AppendFormat("- confirmation: {0}\n", confirmation);
+			sb.AppendFormat("- param1: {0}\n", param1);
+			sb.AppendFormat("- param2: {0}\n", param2);
+			sb.AppendFormat("- param3: {0}\n", param3);
+			sb.AppendFormat("- param4: {0}\n", param4);
+			sb.AppendFormat("- param5: {0}\n", param5);
+			sb.AppendFormat("- param6: {0}\n", param6);
+			sb.AppendFormat("- param7: {0}\n", param7);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5036,9 +6300,20 @@ namespace MavLink
 		public byte result;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_COMMAND_ACK(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_COMMAND_ACK(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_COMMAND_ACK:\n");
+			sb.AppendFormat("- command: {0}\n", command);
+			sb.AppendFormat("- result: {0}\n", result);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5074,9 +6349,23 @@ namespace MavLink
 		public float thrust;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_ROLL_PITCH_YAW_RATES_THRUST_SETPOINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_ROLL_PITCH_YAW_RATES_THRUST_SETPOINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_ROLL_PITCH_YAW_RATES_THRUST_SETPOINT:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- roll_rate: {0}\n", roll_rate);
+			sb.AppendFormat("- pitch_rate: {0}\n", pitch_rate);
+			sb.AppendFormat("- yaw_rate: {0}\n", yaw_rate);
+			sb.AppendFormat("- thrust: {0}\n", thrust);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5122,9 +6411,25 @@ namespace MavLink
 		public byte manual_override_switch;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MANUAL_SETPOINT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MANUAL_SETPOINT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MANUAL_SETPOINT:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- thrust: {0}\n", thrust);
+			sb.AppendFormat("- mode_switch: {0}\n", mode_switch);
+			sb.AppendFormat("- manual_override_switch: {0}\n", manual_override_switch);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5158,9 +6463,25 @@ namespace MavLink
 		public float yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5251,9 +6572,34 @@ namespace MavLink
 		public Int16 zacc;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HIL_STATE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HIL_STATE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HIL_STATE:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- rollspeed: {0}\n", rollspeed);
+			sb.AppendFormat("- pitchspeed: {0}\n", pitchspeed);
+			sb.AppendFormat("- yawspeed: {0}\n", yawspeed);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lon: {0}\n", lon);
+			sb.AppendFormat("- alt: {0}\n", alt);
+			sb.AppendFormat("- vx: {0}\n", vx);
+			sb.AppendFormat("- vy: {0}\n", vy);
+			sb.AppendFormat("- vz: {0}\n", vz);
+			sb.AppendFormat("- xacc: {0}\n", xacc);
+			sb.AppendFormat("- yacc: {0}\n", yacc);
+			sb.AppendFormat("- zacc: {0}\n", zacc);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5319,9 +6665,29 @@ namespace MavLink
 		public byte nav_mode;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HIL_CONTROLS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HIL_CONTROLS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HIL_CONTROLS:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- roll_ailerons: {0}\n", roll_ailerons);
+			sb.AppendFormat("- pitch_elevator: {0}\n", pitch_elevator);
+			sb.AppendFormat("- yaw_rudder: {0}\n", yaw_rudder);
+			sb.AppendFormat("- throttle: {0}\n", throttle);
+			sb.AppendFormat("- aux1: {0}\n", aux1);
+			sb.AppendFormat("- aux2: {0}\n", aux2);
+			sb.AppendFormat("- aux3: {0}\n", aux3);
+			sb.AppendFormat("- aux4: {0}\n", aux4);
+			sb.AppendFormat("- mode: {0}\n", mode);
+			sb.AppendFormat("- nav_mode: {0}\n", nav_mode);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5402,9 +6768,32 @@ namespace MavLink
 		public byte rssi;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HIL_RC_INPUTS_RAW(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HIL_RC_INPUTS_RAW(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HIL_RC_INPUTS_RAW:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- chan1_raw: {0}\n", chan1_raw);
+			sb.AppendFormat("- chan2_raw: {0}\n", chan2_raw);
+			sb.AppendFormat("- chan3_raw: {0}\n", chan3_raw);
+			sb.AppendFormat("- chan4_raw: {0}\n", chan4_raw);
+			sb.AppendFormat("- chan5_raw: {0}\n", chan5_raw);
+			sb.AppendFormat("- chan6_raw: {0}\n", chan6_raw);
+			sb.AppendFormat("- chan7_raw: {0}\n", chan7_raw);
+			sb.AppendFormat("- chan8_raw: {0}\n", chan8_raw);
+			sb.AppendFormat("- chan9_raw: {0}\n", chan9_raw);
+			sb.AppendFormat("- chan10_raw: {0}\n", chan10_raw);
+			sb.AppendFormat("- chan11_raw: {0}\n", chan11_raw);
+			sb.AppendFormat("- chan12_raw: {0}\n", chan12_raw);
+			sb.AppendFormat("- rssi: {0}\n", rssi);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5455,9 +6844,26 @@ namespace MavLink
 		public float ground_distance;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_OPTICAL_FLOW(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_OPTICAL_FLOW(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_OPTICAL_FLOW:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- sensor_id: {0}\n", sensor_id);
+			sb.AppendFormat("- flow_x: {0}\n", flow_x);
+			sb.AppendFormat("- flow_y: {0}\n", flow_y);
+			sb.AppendFormat("- flow_comp_m_x: {0}\n", flow_comp_m_x);
+			sb.AppendFormat("- flow_comp_m_y: {0}\n", flow_comp_m_y);
+			sb.AppendFormat("- quality: {0}\n", quality);
+			sb.AppendFormat("- ground_distance: {0}\n", ground_distance);
+
+            return sb.ToString();
+        }
+
 	}
 
 	public class Msg_global_vision_position_estimate : MavlinkMessage
@@ -5499,9 +6905,25 @@ namespace MavLink
 		public float yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_GLOBAL_VISION_POSITION_ESTIMATE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_GLOBAL_VISION_POSITION_ESTIMATE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_GLOBAL_VISION_POSITION_ESTIMATE:\n");
+			sb.AppendFormat("- usec: {0}\n", usec);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 	public class Msg_vision_position_estimate : MavlinkMessage
@@ -5543,9 +6965,25 @@ namespace MavLink
 		public float yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_VISION_POSITION_ESTIMATE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_VISION_POSITION_ESTIMATE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_VISION_POSITION_ESTIMATE:\n");
+			sb.AppendFormat("- usec: {0}\n", usec);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 	public class Msg_vision_speed_estimate : MavlinkMessage
@@ -5572,9 +7010,22 @@ namespace MavLink
 		public float z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_VISION_SPEED_ESTIMATE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_VISION_SPEED_ESTIMATE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_VISION_SPEED_ESTIMATE:\n");
+			sb.AppendFormat("- usec: {0}\n", usec);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+
+            return sb.ToString();
+        }
+
 	}
 
 	public class Msg_vicon_position_estimate : MavlinkMessage
@@ -5616,9 +7067,25 @@ namespace MavLink
 		public float yaw;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_VICON_POSITION_ESTIMATE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_VICON_POSITION_ESTIMATE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_VICON_POSITION_ESTIMATE:\n");
+			sb.AppendFormat("- usec: {0}\n", usec);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5704,9 +7171,33 @@ namespace MavLink
 		public UInt16 fields_updated;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HIGHRES_IMU(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HIGHRES_IMU(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HIGHRES_IMU:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- xacc: {0}\n", xacc);
+			sb.AppendFormat("- yacc: {0}\n", yacc);
+			sb.AppendFormat("- zacc: {0}\n", zacc);
+			sb.AppendFormat("- xgyro: {0}\n", xgyro);
+			sb.AppendFormat("- ygyro: {0}\n", ygyro);
+			sb.AppendFormat("- zgyro: {0}\n", zgyro);
+			sb.AppendFormat("- xmag: {0}\n", xmag);
+			sb.AppendFormat("- ymag: {0}\n", ymag);
+			sb.AppendFormat("- zmag: {0}\n", zmag);
+			sb.AppendFormat("- abs_pressure: {0}\n", abs_pressure);
+			sb.AppendFormat("- diff_pressure: {0}\n", diff_pressure);
+			sb.AppendFormat("- pressure_alt: {0}\n", pressure_alt);
+			sb.AppendFormat("- temperature: {0}\n", temperature);
+			sb.AppendFormat("- fields_updated: {0}\n", fields_updated);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5747,9 +7238,24 @@ namespace MavLink
 		public float front_distance_m;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_OMNIDIRECTIONAL_FLOW(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_OMNIDIRECTIONAL_FLOW(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_OMNIDIRECTIONAL_FLOW:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- sensor_id: {0}\n", sensor_id);
+			sb.AppendFormat("- left: {0}\n", left);
+			sb.AppendFormat("- right: {0}\n", right);
+			sb.AppendFormat("- quality: {0}\n", quality);
+			sb.AppendFormat("- front_distance_m: {0}\n", front_distance_m);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5835,9 +7341,33 @@ namespace MavLink
 		public UInt32 fields_updated;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HIL_SENSOR(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HIL_SENSOR(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HIL_SENSOR:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- xacc: {0}\n", xacc);
+			sb.AppendFormat("- yacc: {0}\n", yacc);
+			sb.AppendFormat("- zacc: {0}\n", zacc);
+			sb.AppendFormat("- xgyro: {0}\n", xgyro);
+			sb.AppendFormat("- ygyro: {0}\n", ygyro);
+			sb.AppendFormat("- zgyro: {0}\n", zgyro);
+			sb.AppendFormat("- xmag: {0}\n", xmag);
+			sb.AppendFormat("- ymag: {0}\n", ymag);
+			sb.AppendFormat("- zmag: {0}\n", zmag);
+			sb.AppendFormat("- abs_pressure: {0}\n", abs_pressure);
+			sb.AppendFormat("- diff_pressure: {0}\n", diff_pressure);
+			sb.AppendFormat("- pressure_alt: {0}\n", pressure_alt);
+			sb.AppendFormat("- temperature: {0}\n", temperature);
+			sb.AppendFormat("- fields_updated: {0}\n", fields_updated);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -5953,9 +7483,39 @@ namespace MavLink
 		public float vd;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SIM_STATE(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SIM_STATE(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SIM_STATE:\n");
+			sb.AppendFormat("- q1: {0}\n", q1);
+			sb.AppendFormat("- q2: {0}\n", q2);
+			sb.AppendFormat("- q3: {0}\n", q3);
+			sb.AppendFormat("- q4: {0}\n", q4);
+			sb.AppendFormat("- roll: {0}\n", roll);
+			sb.AppendFormat("- pitch: {0}\n", pitch);
+			sb.AppendFormat("- yaw: {0}\n", yaw);
+			sb.AppendFormat("- xacc: {0}\n", xacc);
+			sb.AppendFormat("- yacc: {0}\n", yacc);
+			sb.AppendFormat("- zacc: {0}\n", zacc);
+			sb.AppendFormat("- xgyro: {0}\n", xgyro);
+			sb.AppendFormat("- ygyro: {0}\n", ygyro);
+			sb.AppendFormat("- zgyro: {0}\n", zgyro);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lon: {0}\n", lon);
+			sb.AppendFormat("- alt: {0}\n", alt);
+			sb.AppendFormat("- std_dev_horz: {0}\n", std_dev_horz);
+			sb.AppendFormat("- std_dev_vert: {0}\n", std_dev_vert);
+			sb.AppendFormat("- vn: {0}\n", vn);
+			sb.AppendFormat("- ve: {0}\n", ve);
+			sb.AppendFormat("- vd: {0}\n", vd);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6001,9 +7561,25 @@ namespace MavLink
 		public UInt16 @fixed;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_RADIO_STATUS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_RADIO_STATUS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_RADIO_STATUS:\n");
+			sb.AppendFormat("- rssi: {0}\n", rssi);
+			sb.AppendFormat("- remrssi: {0}\n", remrssi);
+			sb.AppendFormat("- txbuf: {0}\n", txbuf);
+			sb.AppendFormat("- noise: {0}\n", noise);
+			sb.AppendFormat("- remnoise: {0}\n", remnoise);
+			sb.AppendFormat("- rxerrors: {0}\n", rxerrors);
+			sb.AppendFormat("- fixed: {0}\n", @fixed);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6039,9 +7615,23 @@ namespace MavLink
 		public byte flags;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_FILE_TRANSFER_START(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_FILE_TRANSFER_START(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_FILE_TRANSFER_START:\n");
+			sb.AppendFormat("- transfer_uid: {0}\n", transfer_uid);
+			sb.AppendFormat("- dest_path: {0}\n", dest_path);
+			sb.AppendFormat("- direction: {0}\n", direction);
+			sb.AppendFormat("- file_size: {0}\n", file_size);
+			sb.AppendFormat("- flags: {0}\n", flags);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6067,9 +7657,21 @@ namespace MavLink
 		public byte flags;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_FILE_TRANSFER_DIR_LIST(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_FILE_TRANSFER_DIR_LIST(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_FILE_TRANSFER_DIR_LIST:\n");
+			sb.AppendFormat("- transfer_uid: {0}\n", transfer_uid);
+			sb.AppendFormat("- dir_path: {0}\n", dir_path);
+			sb.AppendFormat("- flags: {0}\n", flags);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6090,9 +7692,20 @@ namespace MavLink
 		public byte result;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_FILE_TRANSFER_RES(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_FILE_TRANSFER_RES(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_FILE_TRANSFER_RES:\n");
+			sb.AppendFormat("- transfer_uid: {0}\n", transfer_uid);
+			sb.AppendFormat("- result: {0}\n", result);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6169,9 +7782,31 @@ namespace MavLink
 		public byte satellites_visible;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HIL_GPS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HIL_GPS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HIL_GPS:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- fix_type: {0}\n", fix_type);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lon: {0}\n", lon);
+			sb.AppendFormat("- alt: {0}\n", alt);
+			sb.AppendFormat("- eph: {0}\n", eph);
+			sb.AppendFormat("- epv: {0}\n", epv);
+			sb.AppendFormat("- vel: {0}\n", vel);
+			sb.AppendFormat("- vn: {0}\n", vn);
+			sb.AppendFormat("- ve: {0}\n", ve);
+			sb.AppendFormat("- vd: {0}\n", vd);
+			sb.AppendFormat("- cog: {0}\n", cog);
+			sb.AppendFormat("- satellites_visible: {0}\n", satellites_visible);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6222,9 +7857,26 @@ namespace MavLink
 		public float ground_distance;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HIL_OPTICAL_FLOW(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HIL_OPTICAL_FLOW(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HIL_OPTICAL_FLOW:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- sensor_id: {0}\n", sensor_id);
+			sb.AppendFormat("- flow_x: {0}\n", flow_x);
+			sb.AppendFormat("- flow_y: {0}\n", flow_y);
+			sb.AppendFormat("- flow_comp_m_x: {0}\n", flow_comp_m_x);
+			sb.AppendFormat("- flow_comp_m_y: {0}\n", flow_comp_m_y);
+			sb.AppendFormat("- quality: {0}\n", quality);
+			sb.AppendFormat("- ground_distance: {0}\n", ground_distance);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6315,9 +7967,34 @@ namespace MavLink
 		public Int16 zacc;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_HIL_STATE_QUATERNION(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_HIL_STATE_QUATERNION(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_HIL_STATE_QUATERNION:\n");
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- attitude_quaternion: {0}\n", attitude_quaternion);
+			sb.AppendFormat("- rollspeed: {0}\n", rollspeed);
+			sb.AppendFormat("- pitchspeed: {0}\n", pitchspeed);
+			sb.AppendFormat("- yawspeed: {0}\n", yawspeed);
+			sb.AppendFormat("- lat: {0}\n", lat);
+			sb.AppendFormat("- lon: {0}\n", lon);
+			sb.AppendFormat("- alt: {0}\n", alt);
+			sb.AppendFormat("- vx: {0}\n", vx);
+			sb.AppendFormat("- vy: {0}\n", vy);
+			sb.AppendFormat("- vz: {0}\n", vz);
+			sb.AppendFormat("- ind_airspeed: {0}\n", ind_airspeed);
+			sb.AppendFormat("- true_airspeed: {0}\n", true_airspeed);
+			sb.AppendFormat("- xacc: {0}\n", xacc);
+			sb.AppendFormat("- yacc: {0}\n", yacc);
+			sb.AppendFormat("- zacc: {0}\n", zacc);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6383,9 +8060,29 @@ namespace MavLink
 		public sbyte battery_remaining;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_BATTERY_STATUS(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_BATTERY_STATUS(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_BATTERY_STATUS:\n");
+			sb.AppendFormat("- accu_id: {0}\n", accu_id);
+			sb.AppendFormat("- voltage_cell_1: {0}\n", voltage_cell_1);
+			sb.AppendFormat("- voltage_cell_2: {0}\n", voltage_cell_2);
+			sb.AppendFormat("- voltage_cell_3: {0}\n", voltage_cell_3);
+			sb.AppendFormat("- voltage_cell_4: {0}\n", voltage_cell_4);
+			sb.AppendFormat("- voltage_cell_5: {0}\n", voltage_cell_5);
+			sb.AppendFormat("- voltage_cell_6: {0}\n", voltage_cell_6);
+			sb.AppendFormat("- current_battery: {0}\n", current_battery);
+			sb.AppendFormat("- current_consumed: {0}\n", current_consumed);
+			sb.AppendFormat("- energy_consumed: {0}\n", energy_consumed);
+			sb.AppendFormat("- battery_remaining: {0}\n", battery_remaining);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6441,9 +8138,27 @@ namespace MavLink
 		public float val8;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SETPOINT_8DOF(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SETPOINT_8DOF(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SETPOINT_8DOF:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- val1: {0}\n", val1);
+			sb.AppendFormat("- val2: {0}\n", val2);
+			sb.AppendFormat("- val3: {0}\n", val3);
+			sb.AppendFormat("- val4: {0}\n", val4);
+			sb.AppendFormat("- val5: {0}\n", val5);
+			sb.AppendFormat("- val6: {0}\n", val6);
+			sb.AppendFormat("- val7: {0}\n", val7);
+			sb.AppendFormat("- val8: {0}\n", val8);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6489,9 +8204,25 @@ namespace MavLink
 		public float rot_z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_SETPOINT_6DOF(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_SETPOINT_6DOF(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_SETPOINT_6DOF:\n");
+			sb.AppendFormat("- target_system: {0}\n", target_system);
+			sb.AppendFormat("- trans_x: {0}\n", trans_x);
+			sb.AppendFormat("- trans_y: {0}\n", trans_y);
+			sb.AppendFormat("- trans_z: {0}\n", trans_z);
+			sb.AppendFormat("- rot_x: {0}\n", rot_x);
+			sb.AppendFormat("- rot_y: {0}\n", rot_y);
+			sb.AppendFormat("- rot_z: {0}\n", rot_z);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6522,9 +8253,22 @@ namespace MavLink
 		public sbyte[] value; // Array size 32
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_MEMORY_VECT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_MEMORY_VECT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_MEMORY_VECT:\n");
+			sb.AppendFormat("- address: {0}\n", address);
+			sb.AppendFormat("- ver: {0}\n", ver);
+			sb.AppendFormat("- type: {0}\n", type);
+			sb.AppendFormat("- value: {0}\n", value);
+
+            return sb.ToString();
+        }
+
 	}
 
 	public class Msg_debug_vect : MavlinkMessage
@@ -6540,9 +8284,23 @@ namespace MavLink
 		public float z;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DEBUG_VECT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DEBUG_VECT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DEBUG_VECT:\n");
+			sb.AppendFormat("- name: {0}\n", name);
+			sb.AppendFormat("- time_usec: {0}\n", time_usec);
+			sb.AppendFormat("- x: {0}\n", x);
+			sb.AppendFormat("- y: {0}\n", y);
+			sb.AppendFormat("- z: {0}\n", z);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6568,9 +8326,21 @@ namespace MavLink
 		public float value;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_NAMED_VALUE_FLOAT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_NAMED_VALUE_FLOAT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_NAMED_VALUE_FLOAT:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- name: {0}\n", name);
+			sb.AppendFormat("- value: {0}\n", value);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6596,9 +8366,21 @@ namespace MavLink
 		public Int32 value;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_NAMED_VALUE_INT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_NAMED_VALUE_INT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_NAMED_VALUE_INT:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- name: {0}\n", name);
+			sb.AppendFormat("- value: {0}\n", value);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6619,9 +8401,20 @@ namespace MavLink
 		public byte[] text; // Array size 50
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_STATUSTEXT(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_STATUSTEXT(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_STATUSTEXT:\n");
+			sb.AppendFormat("- severity: {0}\n", severity);
+			sb.AppendFormat("- text: {0}\n", text);
+
+            return sb.ToString();
+        }
+
 	}
 
 
@@ -6647,9 +8440,21 @@ namespace MavLink
 		public float value;
 
         public override int Serialize(byte[] bytes, ref int offset)
-            {
-                return MavLinkSerializer.Serialize_DEBUG(this, bytes, ref offset);
-            }        
+        {
+            return MavLinkSerializer.Serialize_DEBUG(this, bytes, ref offset);
+        }
+
+        public override string ToString()
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.Append("MSG_DEBUG:\n");
+			sb.AppendFormat("- time_boot_ms: {0}\n", time_boot_ms);
+			sb.AppendFormat("- ind: {0}\n", ind);
+			sb.AppendFormat("- value: {0}\n", value);
+
+            return sb.ToString();
+        }
+
 	}
 
 }

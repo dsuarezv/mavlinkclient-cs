@@ -227,7 +227,7 @@ namespace mavlinkudp
 
         private static void HandlePacketReceived(object sender, MavlinkPacket e)
         {
-            Console.WriteLine("Received packet: {0}", e);
+            Console.WriteLine("Received packet: {0}", e.Message);
         }
 
 
