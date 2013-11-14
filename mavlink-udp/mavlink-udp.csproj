@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -35,11 +35,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\mavlink-generated\mavlinkprotocol-xamarin.csproj">
-      <Project>{69A45336-9FCA-4C33-B26E-ECDEAEF0CF00}</Project>
-      <Name>mavlinkprotocol-xamarin</Name>
+    <ProjectReference Include="..\mavlink-generated\mavlinkprotocol.csproj">
+      <Project>{d69ced4a-0f4b-43a7-bfc4-a274c30bd567}</Project>
+      <Name>mavlinkprotocol</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
