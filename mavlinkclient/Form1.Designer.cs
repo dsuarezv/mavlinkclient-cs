@@ -1,4 +1,4 @@
-﻿namespace mavlinkclient
+﻿namespace mavlinkscope
 {
     partial class Form1
     {
@@ -34,6 +34,9 @@
             this.PitchTrackbar = new System.Windows.Forms.TrackBar();
             this.label3 = new System.Windows.Forms.Label();
             this.YawTrackbar = new System.Windows.Forms.TrackBar();
+            this.RollValueLabel = new System.Windows.Forms.Label();
+            this.PitchValueLabel = new System.Windows.Forms.Label();
+            this.YawValueLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RollTrackbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PitchTrackbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YawTrackbar)).BeginInit();
@@ -99,11 +102,41 @@
             this.YawTrackbar.TabIndex = 4;
             this.YawTrackbar.Scroll += new System.EventHandler(this.YawTrackbar_Scroll);
             // 
+            // RollValueLabel
+            // 
+            this.RollValueLabel.AutoSize = true;
+            this.RollValueLabel.Location = new System.Drawing.Point(278, 37);
+            this.RollValueLabel.Name = "RollValueLabel";
+            this.RollValueLabel.Size = new System.Drawing.Size(13, 13);
+            this.RollValueLabel.TabIndex = 6;
+            this.RollValueLabel.Text = "0";
+            // 
+            // PitchValueLabel
+            // 
+            this.PitchValueLabel.AutoSize = true;
+            this.PitchValueLabel.Location = new System.Drawing.Point(278, 84);
+            this.PitchValueLabel.Name = "PitchValueLabel";
+            this.PitchValueLabel.Size = new System.Drawing.Size(13, 13);
+            this.PitchValueLabel.TabIndex = 7;
+            this.PitchValueLabel.Text = "0";
+            // 
+            // YawValueLabel
+            // 
+            this.YawValueLabel.AutoSize = true;
+            this.YawValueLabel.Location = new System.Drawing.Point(278, 126);
+            this.YawValueLabel.Name = "YawValueLabel";
+            this.YawValueLabel.Size = new System.Drawing.Size(13, 13);
+            this.YawValueLabel.TabIndex = 8;
+            this.YawValueLabel.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 396);
+            this.Controls.Add(this.YawValueLabel);
+            this.Controls.Add(this.PitchValueLabel);
+            this.Controls.Add(this.RollValueLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.YawTrackbar);
             this.Controls.Add(this.label2);
@@ -111,7 +144,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RollTrackbar);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Mavlink Scope";
             ((System.ComponentModel.ISupportInitialize)(this.RollTrackbar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PitchTrackbar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YawTrackbar)).EndInit();
@@ -128,6 +161,9 @@
         private System.Windows.Forms.TrackBar PitchTrackbar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TrackBar YawTrackbar;
+        private System.Windows.Forms.Label RollValueLabel;
+        private System.Windows.Forms.Label PitchValueLabel;
+        private System.Windows.Forms.Label YawValueLabel;
     }
 }
 

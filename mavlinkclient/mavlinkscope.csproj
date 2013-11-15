@@ -7,8 +7,8 @@
     <ProjectGuid>{7BB0BD51-0888-4E16-A603-8BE41A0B0FF7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>mavlinkclient</RootNamespace>
-    <AssemblyName>mavlinkclient</AssemblyName>
+    <RootNamespace>mavlinkscope</RootNamespace>
+    <AssemblyName>mavlinkscope</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -63,6 +63,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

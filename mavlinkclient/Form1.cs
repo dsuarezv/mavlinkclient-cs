@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 using MavLink;
 
-namespace mavlinkclient
+namespace mavlinkscope
 {
     public partial class Form1 : Form
     {
@@ -27,6 +27,7 @@ namespace mavlinkclient
             mMavLink = new MavLinkUdpClient();
             mMavLink.Initialize();
             mMavLink.BeginHeartBeatLoop();
+            mMavLink.HeartBeatUpdateRateMs = 100;
         }
 
         private void RollTrackbar_Scroll(object sender, EventArgs e)
@@ -49,7 +50,15 @@ namespace mavlinkclient
 
         private void UpdateAttitude()
         {
-            mMavLink.SendMessage(mMavLink.MsgAttitude);
+            //mMavLink.SendMessage(mMavLink.MsgAttitude);
+            RollValueLabel.Text = GetAttitudeDegrees(RollTrackbar.Value);
+            PitchValueLabel.Text = GetAttitudeDegrees(PitchTrackbar.Value);
+            YawValueLabel.Text = GetAttitudeDegrees(YawTrackbar.Value);
+        }
+
+        private string GetAttitudeDegrees(int val)
+        {
+            return string.Format("{0:0.0}", val / 100f * 180f / Math.PI);
         }
     }
 }
