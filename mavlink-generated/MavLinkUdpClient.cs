@@ -14,11 +14,7 @@ namespace MavLink
         public int MavlinkComponentId = 1;
         public IPAddress TargetIpAddress = new IPAddress(new byte[] { 127, 0, 0, 1 });
         public int HeartBeatUpdateRateMs = 1000;
-
-        public Msg_heartbeat MsgHeartBeat;
-        public Msg_sys_status MsgSysStatus;
-        public Msg_local_position_ned MsgLocalPosition;
-        public Msg_attitude MsgAttitude;
+        public UavState UavState = new UavState();
 
         public event PacketReceivedEventHandler OnPacketReceived;
         
@@ -33,61 +29,8 @@ namespace MavLink
         public void Initialize()
         {
             InitializeMavLink();
-            InitializeStatusMessages();
             InitializeUdpListener(UdpListeningPort);
             InitializeUdpSender(TargetIpAddress, UdpTargetPort);
-        }
-
-        private void InitializeStatusMessages()
-        { 
-            MsgHeartBeat = new Msg_heartbeat
-            {
-                type = (byte)MAV_TYPE.MAV_TYPE_QUADROTOR,
-                autopilot = (byte)MAV_AUTOPILOT.MAV_AUTOPILOT_ARDUPILOTMEGA,
-                base_mode = (byte)MAV_MODE_FLAG.MAV_MODE_FLAG_AUTO_ENABLED,
-                custom_mode = 0, 
-                system_status = (byte)MAV_STATE.MAV_STATE_ACTIVE,
-                mavlink_version = (byte)3,
-            };
-
-            MsgSysStatus = new Msg_sys_status 
-            {
-                onboard_control_sensors_present = 0,
-                onboard_control_sensors_enabled = 0,
-                onboard_control_sensors_health = 0,
-                load = 500,
-                voltage_battery = 11000,
-                current_battery = -1,
-                battery_remaining = -1,
-                drop_rate_comm = 0,
-                errors_comm = 0,
-                errors_count1 = 0,
-                errors_count2 = 0,
-                errors_count3 = 0,
-                errors_count4 = 0,
-            };
-
-            MsgLocalPosition = new Msg_local_position_ned
-            {
-                time_boot_ms = 0,
-                x = 0,
-                y = 0, 
-                z = 0, 
-                vx = 0, 
-                vy = 0, 
-                vz = 0,
-            };
-
-            MsgAttitude = new Msg_attitude
-            {
-                time_boot_ms = 0,
-                roll = 0,
-                pitch = 0,
-                yaw = 0,
-                rollspeed = 0,
-                pitchspeed = 0,
-                yawspeed = 0,
-            };
         }
 
         private void InitializeMavLink()
@@ -201,10 +144,10 @@ namespace MavLink
         {
             while (true)
             {
-                SendMessage(MsgHeartBeat);
-                SendMessage(MsgSysStatus);
-                SendMessage(MsgLocalPosition);
-                SendMessage(MsgAttitude);
+                foreach (MavlinkMessage m in UavState.GetHeartBeatObjects())
+                {
+                    SendMessage(m);
+                } 
 
                 Thread.Sleep(HeartBeatUpdateRateMs);
             }

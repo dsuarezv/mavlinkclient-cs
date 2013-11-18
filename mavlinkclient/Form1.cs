@@ -15,6 +15,7 @@ namespace mavlinkscope
     {
 
         private MavLinkUdpClient mMavLink;
+        private Msg_attitude mAttitudeState;
 
         public Form1()
         {
@@ -28,23 +29,25 @@ namespace mavlinkscope
             mMavLink.Initialize();
             mMavLink.BeginHeartBeatLoop();
             mMavLink.HeartBeatUpdateRateMs = 100;
+
+            mAttitudeState = (Msg_attitude)mMavLink.UavState.Get("ATTITUDE");
         }
 
         private void RollTrackbar_Scroll(object sender, EventArgs e)
         {
-            mMavLink.MsgAttitude.roll = RollTrackbar.Value / 100f;
+            mAttitudeState.roll = RollTrackbar.Value / 100f;
             UpdateAttitude();
         }
 
         private void PitchTrackbar_Scroll(object sender, EventArgs e)
         {
-            mMavLink.MsgAttitude.pitch = PitchTrackbar.Value / 100f;
+            mAttitudeState.pitch = PitchTrackbar.Value / 100f;
             UpdateAttitude();
         }
 
         private void YawTrackbar_Scroll(object sender, EventArgs e)
         {
-            mMavLink.MsgAttitude.yaw = YawTrackbar.Value / 100f;
+            mAttitudeState.yaw = YawTrackbar.Value / 100f;
             UpdateAttitude();
         }
 
@@ -58,7 +61,7 @@ namespace mavlinkscope
 
         private string GetAttitudeDegrees(int val)
         {
-            return string.Format("{0:0.0}", val / 100f * 180f / Math.PI);
+            return string.Format("{0:0.}º", val / 100f * 180f / Math.PI);
         }
     }
 }

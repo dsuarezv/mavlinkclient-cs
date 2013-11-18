@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 396);
+            this.ClientSize = new System.Drawing.Size(717, 508);
             this.Controls.Add(this.YawValueLabel);
             this.Controls.Add(this.PitchValueLabel);
             this.Controls.Add(this.RollValueLabel);
