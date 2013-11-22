@@ -29,17 +29,14 @@
     <Externalconsole>true</Externalconsole>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="mavlink">
+      <HintPath>..\..\mavlink-generator\mavlink.net\bin\Debug\mavlink.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\mavlink-generated\mavlinkprotocol.csproj">
-      <Project>{d69ced4a-0f4b-43a7-bfc4-a274c30bd567}</Project>
-      <Name>mavlinkprotocol</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

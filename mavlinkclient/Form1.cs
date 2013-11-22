@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using MavLink;
+using MavLinkNet;
 
 namespace mavlinkscope
 {
     public partial class Form1 : Form
     {
 
-        private MavLinkUdpClient mMavLink;
-        private Msg_attitude mAttitudeState;
+        private MavLinkUdpTransport mMavLink;
+        private UasAttitude mAttitudeState;
 
         public Form1()
         {
@@ -25,35 +25,35 @@ namespace mavlinkscope
 
         private void InitializeMavLink()
         {
-            mMavLink = new MavLinkUdpClient();
+            mMavLink = new MavLinkUdpTransport();
             mMavLink.Initialize();
             mMavLink.BeginHeartBeatLoop();
             mMavLink.HeartBeatUpdateRateMs = 100;
 
-            mAttitudeState = (Msg_attitude)mMavLink.UavState.Get("ATTITUDE");
+            mAttitudeState = (UasAttitude)mMavLink.UavState.Get("Attitude");
         }
 
         private void RollTrackbar_Scroll(object sender, EventArgs e)
         {
-            mAttitudeState.roll = RollTrackbar.Value / 100f;
+            mAttitudeState.Roll = RollTrackbar.Value / 100f;
             UpdateAttitude();
         }
 
         private void PitchTrackbar_Scroll(object sender, EventArgs e)
         {
-            mAttitudeState.pitch = PitchTrackbar.Value / 100f;
+            mAttitudeState.Pitch = PitchTrackbar.Value / 100f;
             UpdateAttitude();
         }
 
         private void YawTrackbar_Scroll(object sender, EventArgs e)
         {
-            mAttitudeState.yaw = YawTrackbar.Value / 100f;
+            mAttitudeState.Yaw = YawTrackbar.Value / 100f;
             UpdateAttitude();
         }
 
         private void UpdateAttitude()
         {
-            //mMavLink.SendMessage(mMavLink.MsgAttitude);
+            //mMavLink.SendMessage(mAttitudeState);
             RollValueLabel.Text = GetAttitudeDegrees(RollTrackbar.Value);
             PitchValueLabel.Text = GetAttitudeDegrees(PitchTrackbar.Value);
             YawValueLabel.Text = GetAttitudeDegrees(YawTrackbar.Value);
