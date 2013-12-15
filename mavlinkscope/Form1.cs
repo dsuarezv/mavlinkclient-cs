@@ -20,17 +20,32 @@ namespace mavlinkscope
         public Form1()
         {
             InitializeComponent();
-            InitializeMavLink();
         }
 
         private void InitializeMavLink()
         {
             mMavLink = new MavLinkUdpTransport();
+            mMavLink.MavlinkSystemId = GetSystemId();
             mMavLink.Initialize();
             mMavLink.BeginHeartBeatLoop();
             mMavLink.HeartBeatUpdateRateMs = 100;
 
             mAttitudeState = (UasAttitude)mMavLink.UavState.Get("Attitude");
+        }
+
+        private byte GetSystemId()
+        {
+            byte result;
+
+            if (!byte.TryParse(SystemIdTextBox.Text, out result)) return 180;
+
+            return result;
+        }
+
+        private void ConnectButton_Click(object sender, EventArgs e)
+        {
+            InitializeMavLink();
+            ConnectButton.Enabled = false;
         }
 
         private void RollTrackbar_Scroll(object sender, EventArgs e)
@@ -63,5 +78,6 @@ namespace mavlinkscope
         {
             return string.Format("{0:0.}º", val / 100f * 180f / Math.PI);
         }
+
     }
 }

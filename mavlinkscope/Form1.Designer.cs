@@ -37,6 +37,9 @@
             this.RollValueLabel = new System.Windows.Forms.Label();
             this.PitchValueLabel = new System.Windows.Forms.Label();
             this.YawValueLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SystemIdTextBox = new System.Windows.Forms.TextBox();
+            this.ConnectButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.RollTrackbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PitchTrackbar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YawTrackbar)).BeginInit();
@@ -45,7 +48,7 @@
             // RollTrackbar
             // 
             this.RollTrackbar.LargeChange = 100;
-            this.RollTrackbar.Location = new System.Drawing.Point(68, 31);
+            this.RollTrackbar.Location = new System.Drawing.Point(97, 117);
             this.RollTrackbar.Maximum = 314;
             this.RollTrackbar.Minimum = -314;
             this.RollTrackbar.Name = "RollTrackbar";
@@ -56,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 37);
+            this.label1.Location = new System.Drawing.Point(48, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 1;
@@ -65,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 84);
+            this.label2.Location = new System.Drawing.Point(48, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 3;
@@ -74,7 +77,7 @@
             // PitchTrackbar
             // 
             this.PitchTrackbar.LargeChange = 100;
-            this.PitchTrackbar.Location = new System.Drawing.Point(68, 78);
+            this.PitchTrackbar.Location = new System.Drawing.Point(97, 164);
             this.PitchTrackbar.Maximum = 314;
             this.PitchTrackbar.Minimum = -314;
             this.PitchTrackbar.Name = "PitchTrackbar";
@@ -85,7 +88,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 126);
+            this.label3.Location = new System.Drawing.Point(48, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 5;
@@ -94,7 +97,7 @@
             // YawTrackbar
             // 
             this.YawTrackbar.LargeChange = 100;
-            this.YawTrackbar.Location = new System.Drawing.Point(68, 120);
+            this.YawTrackbar.Location = new System.Drawing.Point(97, 206);
             this.YawTrackbar.Maximum = 314;
             this.YawTrackbar.Minimum = -314;
             this.YawTrackbar.Name = "YawTrackbar";
@@ -105,7 +108,7 @@
             // RollValueLabel
             // 
             this.RollValueLabel.AutoSize = true;
-            this.RollValueLabel.Location = new System.Drawing.Point(278, 37);
+            this.RollValueLabel.Location = new System.Drawing.Point(307, 123);
             this.RollValueLabel.Name = "RollValueLabel";
             this.RollValueLabel.Size = new System.Drawing.Size(13, 13);
             this.RollValueLabel.TabIndex = 6;
@@ -114,7 +117,7 @@
             // PitchValueLabel
             // 
             this.PitchValueLabel.AutoSize = true;
-            this.PitchValueLabel.Location = new System.Drawing.Point(278, 84);
+            this.PitchValueLabel.Location = new System.Drawing.Point(307, 170);
             this.PitchValueLabel.Name = "PitchValueLabel";
             this.PitchValueLabel.Size = new System.Drawing.Size(13, 13);
             this.PitchValueLabel.TabIndex = 7;
@@ -123,17 +126,47 @@
             // YawValueLabel
             // 
             this.YawValueLabel.AutoSize = true;
-            this.YawValueLabel.Location = new System.Drawing.Point(278, 126);
+            this.YawValueLabel.Location = new System.Drawing.Point(307, 212);
             this.YawValueLabel.Name = "YawValueLabel";
             this.YawValueLabel.Size = new System.Drawing.Size(13, 13);
             this.YawValueLabel.TabIndex = 8;
             this.YawValueLabel.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "System Id";
+            // 
+            // SystemIdTextBox
+            // 
+            this.SystemIdTextBox.Location = new System.Drawing.Point(72, 6);
+            this.SystemIdTextBox.Name = "SystemIdTextBox";
+            this.SystemIdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.SystemIdTextBox.TabIndex = 10;
+            this.SystemIdTextBox.Text = "180";
+            // 
+            // ConnectButton
+            // 
+            this.ConnectButton.Location = new System.Drawing.Point(179, 5);
+            this.ConnectButton.Name = "ConnectButton";
+            this.ConnectButton.Size = new System.Drawing.Size(75, 23);
+            this.ConnectButton.TabIndex = 11;
+            this.ConnectButton.Text = "Connect";
+            this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 508);
+            this.Controls.Add(this.ConnectButton);
+            this.Controls.Add(this.SystemIdTextBox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.YawValueLabel);
             this.Controls.Add(this.PitchValueLabel);
             this.Controls.Add(this.RollValueLabel);
@@ -164,6 +197,9 @@
         private System.Windows.Forms.Label RollValueLabel;
         private System.Windows.Forms.Label PitchValueLabel;
         private System.Windows.Forms.Label YawValueLabel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox SystemIdTextBox;
+        private System.Windows.Forms.Button ConnectButton;
     }
 }
 
