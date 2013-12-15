@@ -7,14 +7,40 @@ using System.Collections.Generic;
 
 using MavLinkNet;
 
-namespace mavlinkudp
+namespace mavlinkcli
 {
     class MainClass
     {
+        private static int mPacketCount = 0;
+
         public static void Main(string[] args)
         {
             if (!CheckArguments(args)) return;
 
+            switch (args[0].ToLower())
+            {
+                case "udp":
+                    ProcessUdpStream();
+                    break;
+                case "log":
+                    ProcessLogFile(args[1]);
+                    break;
+                default:
+                    PrintUsage();
+                    break;
+            }
+        }
+
+        private static void ProcessLogFile(string logFileName)
+        {
+            MavLinkLogFileTransport mav = new MavLinkLogFileTransport(logFileName);
+
+            mav.OnPacketReceived += OnMavLinkPacketReceived;
+            mav.Initialize();
+        }
+
+        private static void ProcessUdpStream()
+        {
             MavLinkUdpTransport mluc = new MavLinkUdpTransport
             {
                 TargetIpAddress = new IPAddress(new byte[] { 127, 0, 0, 1 }),
@@ -29,9 +55,32 @@ namespace mavlinkudp
             Console.ReadLine();
         }
 
+        
+        // __ Packet processing _______________________________________________
+
+
         static void OnMavLinkPacketReceived(object sender, MavLinkPacket e)
         {
-            PrintMessage(e.Message);
+            PrintPacket(e);
+            //PrintMessage(e.Message);
+            PrintPacketCount();
+        }
+
+        private static void PrintPacketCount()
+        {
+            const int PrintEveryNumPackets = 100;
+
+            if ((mPacketCount++ % PrintEveryNumPackets) == 1)
+            {
+                Console.Error.Write("{0} packets processed.\r", mPacketCount);
+            }
+        }
+
+        private static void PrintPacket(MavLinkPacket p)
+        {
+            WL("FROM {0} _______________________________________________________________", p.SystemId);
+
+            PrintMessage(p.Message);
         }
 
         private static void PrintMessage(UasMessage m)
@@ -73,8 +122,9 @@ namespace mavlinkudp
             {
                 if (f.Name.StartsWith("Param") && (m is UasCommandLong))
                 {
-                    string paramIndex = f.Name.Substring(5);
-                    WL("    {0}: {1} ({2})", f.Name, GetFieldValue(f.Name, m), GetCommandParamDescription((int)m.Command, paramIndex));
+                    WL("    {0}: {1} ({2})", 
+                        f.Name, GetFieldValue(f.Name, m),
+                        GetCommandParamDescription((int)m.Command, f.Name.Substring(5)));
                     continue;
                 }
 
@@ -107,7 +157,11 @@ namespace mavlinkudp
                 return "";
             }
 
-            return p.GetValue(m, null);
+            object result = p.GetValue(m, null);
+
+            if (result is char[]) return new String((char[])result);
+
+            return result;
         }
 
         private static void WL(string msg, params object[] args)
@@ -117,7 +171,21 @@ namespace mavlinkudp
 
         private static bool CheckArguments(string[] args)
         {
+            if (args.Length < 1)
+            {
+                PrintUsage();
+                return false;
+            }
+
             return true;
+        }
+
+        private static void PrintUsage()
+        {
+            WL("Usage: mavlink-cli <command> [args]");
+            WL("Available commands:");
+            WL("  udp : starts a UDP conversation with a GCS on localhost.");
+            WL("  log <logfile> : parses logfile and prints messages.");
         }
     }
 }

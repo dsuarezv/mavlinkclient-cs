@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{AE62057A-923D-4587-A439-9F18A9EC7306}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>mavlinkudp</RootNamespace>
-    <AssemblyName>mavlink-udp</AssemblyName>
+    <RootNamespace>mavlinkcli</RootNamespace>
+    <AssemblyName>mavlink-cli</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
